@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>MooTools AJAX Example</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#nav a").click(function(ev){
+				ev.preventDefault();
+				var content = $("#content");
+				var index = $(this).attr("data-index");
+				content.load("content.php?index=" + index);
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="nav">
+		<a href="#" data-index="home">Home</a>
+		<a href="#" data-index="about">About</a>
+		<a href="#" data-index="contact">Contact</a>
+		<a href="#" data-index="media">Media</a>
+		<a href="#" data-index="portfolio">Portfolio</a>
+	</div>
+	<h3>My Content</h3>
+	<div id="content"></div>
+</body>
+</html>
+
+
+
+
+
