@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.error{
+	color: #ff0000;
+	background: #ffcccc;
+	border: solid 1px #ff3333;
+	padding: 7px;
+	margin: 5px 0;
+}
